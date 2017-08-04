@@ -1,0 +1,15 @@
+<div>
+  <div class="picker" #pickerEl>
+    <div class="picker-panel" #panelEl>
+      <div class="picker-content">
+        <div class="wheel-wrapper">
+          <div *ngFor="let list of data" class="wheel" #wheelEl>
+            <ul class="wheel-scroll" #scrollEl>
+              <li *ngFor="let item of list" class="wheel-item">{{item}}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

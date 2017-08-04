@@ -1,0 +1,57 @@
+@import '../../theme/mixin';
+ul {
+  padding: 0;
+}
+
+.picker {
+  position: relative;
+  overflow: hidden;
+  margin-top: 50px;
+  height: 200px;
+  text-align: center;
+  background-color: transparent;
+  .picker-panel {
+    position: absolute;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+  }
+  .picker-content {
+    position: relative;
+    width: 224px;
+    margin: 0 auto;
+  }
+  .wheel-wrapper {
+    display: flex;
+    justify-content: center;
+    .wheel {
+      width: 107px;
+      height: 200px;
+      font-size: 14px;
+      background-image: -webkit-radial-gradient(140px circle, #fff, #f0f0f0);
+      background-image: radial-gradient(140px circle, #fff, #f0f0f0);
+      &+.wheel {
+        margin-left: 7px;
+      }
+    }
+  }
+  .wheel-scroll {
+    margin-top: 80px;
+    line-height: 40px;
+    .wheel-item {
+      height: 40px;
+      overflow: hidden;
+      white-space: nowrap;
+      color: #333;
+      &.highlight {
+        background-color: #fff;
+        color: #ee5827;
+        font-size: 16px;
+        box-shadow: 1px 2px 3px 3px #f0f0f0;
+      }
+    }
+  }
+}
